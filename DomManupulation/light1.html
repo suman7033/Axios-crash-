@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light</title>
+</head>
+<style>
+     .btn{
+        margin-left: 400px;
+     }
+     .btn1{
+        margin-left:620px;
+        height: 50px;
+        width: 100px;
+     }
+     .btn2{
+        font-size: 30px;
+     }
+</style>
+     
+<body>
+     <img id="btn"src="https://m.media-amazon.com/images/I/51bCZTw1HlL._SX425_.jpg" alt="" height="400px"><br><br><br>
+    <button id="btn1">turn_on</button>
+    <script>
+        let bulb=document.getElementById("btn1")
+        let btn=document.getElementById("btn")
+        bulb.addEventListener("click",bulb1)
+
+       function bulb1(){
+        if(bulb.textContent.includes("on")){
+        btn.src="https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?cs=srgb&dl=pexels-led-supermarket-577514.jpg&fm=jpg"
+        bulb.textContent="turn_off"
+       }else{
+          btn.src="https://m.media-amazon.com/images/I/51bCZTw1HlL._SX425_.jpg"
+          bulb.textContent="turn_on"
+       }
+    }
+
+
+    </script>
+</body>
+</html>

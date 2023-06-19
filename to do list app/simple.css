@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#153677,#4e085f);
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;    
+}
+button{
+     border: none;
+     outline: none;
+     padding: 16px 50px;
+     background: #ff5945;
+     color: #fff;
+     font-size: 16px;
+     cursor: pointer;
+     border-radius: 40px;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAdVBMVEX///8AAADh4eH29valpaVzc3O4uLhSUlL4+Pj7+/vMzMzp6ekyMjKsrKzf39/z8/NHR0eWlpaNjY1ubm7Y2Ng5OTm/v7+BgYHHx8diYmJcXFwhISERERFpaWmTk5MtLS1BQUF7e3uenp4XFxceHh5FRUWpqaleSJkBAAAFhUlEQVR4nO2d6XaqMBRGRRTBoU44USds6/s/4hXUXm35kqBITrq+/ZfgOtvMCWudRoMUEoW+P6wP3/ej2tzi+bad7N+9uln3O5vFoNt7qdzbMf2s3ewXybY7fIXdMNgIsLuyH79V7Bcktp1+sZs0K9OLU9s2gFlQyfDT7dgWUfBx8J/2G9mW0DF+yu9NvF9G62G/MLUduyGz7mOCc9uBl2D6wJDjSx5gCpiXFVyubYdclnY5wYnteB+gX2LJGjrWQq8Yt9Teznaoj2I4bzRtx/kEExPB2HaUT5H+dUHPW+gEe7YjfBpNQx3ajq8CDkrDve3wqmCpENzYDq4a8NTfsh1aReyQoOkw2m+3grjn18uwuRxMRh9mEU6BodFSZjp/7YmlmigeG53UFq/fUv2LK1Unrovm1uBYs+hEVd9GJzZr747gSxfrpuCtvs4vrF1EwVLXpX63toPmP3nJQfozBBrFn+U1i5nAhoOGoXoX+3Npo9zU78RV4Bl1u7vvVb6qaFGvlcFSFfb2rqiqCo12lZZQTgC3lRg5Kqg+kBjclBuY1rU8FBvaz5ti+HoCrfDk0MWK8Xch/D/0LYZuCm6A/0808KgrZp2mYoqiX3/fZsxQkcfvreokhBV0baZwPTOzGrg5sJ1eh0m4wpOwVzIC7RquVZQ6XoWKq87LOIK6YekrOXugvdS5FaJu+G456jKg2eDcEdGU+dxHDvWChtMkf3oET52YC6+gb7byh2nxM3fGmQw0YeRzPliUai9xRIH2GPmcD8YhiQcXCsAxajaYRuAcOdb+qChAS8zqCW0shJ7NIMDyO5sQkKHtkEsCzmGy0QT1UdshlwTM+dm9/h8xBDeD2ZdSNHQEGtJQPjSkoXxoSEP50JCG8qEhDeVDQxrKh4Y0lA8NaSgfGtJQPjSkoXxoSEP50JCG8qEhDeVDQxrKh4Y0lA8NaSgfGtJQPjSkoXxoSEP50JCG8qEhDeVDQxrKh4Y0lA8NaSgfGtJQPjSkoXxoSEP50JCG8qEhDeVDQxrKh4Y0lA8NaSgfGtJQPjSkoXxoSEP50JCG8qEhDeVDQ/cNFXlm/kiuoHGxRZYr6I8YLootsnzNKP2hU6nzGo1VsUWeYR1kLOvajrkcIBFnnocTpCk92o65FP662CJP0wmSI8rNGV8ESrLezB5uwcNI96uSQBL5Q5T+0amOCJI4ntOrvwFD+WnV/4Mc0vwpTGvtUAbEFChcEot3wOOD3ahLADOLXxJxol7qzrIGpHf01uH5OUp57EzOY1iFnWsJVMCVnpii+L9XLRtUYmUzbmPQbH+ztg5gEReSAkdgYe15X99lfGh4XvXIBrbA61yRAZLpnvjw7YVuBhpHvbthBLdkry9cEZxeZNyNInuFYmgreBMUgvcLazzWnBQFzxmKJurN7ouC9OMFf4Yk8CDjXTa//1FVoucN7Aho6Cn6luftfxYH5xwXEoEtFe1rL/xqeIrhNEfasU08UsdbsBxraxTfJa1vmngGv1BwGBrp3vHeD0Lmxi44PLuhVfTeXPvaqe4D6x0yVs0QV0bF7+ra6ZnkGNtaA0TD+QIcOf0A1EP0afT2if0q3bYGQY0MDpNpRzlp3wKHDHRJ4xoL3AzU874rgE54xqQXi0c9TGjnGfnoNu3o8NQZYo1go6FZDUnHZB/kdC2abfTAhbEL6JvoGXDrL561+bcHbs6LSZk73Riessql5C1LZLYMF0T5w6Q5+LpBJmlpvxNhajtsY3aPngbG6uMpMTxzWR04MOKkTx47DIQ7Tiv4/i4wOziwwqKi7wtjmXuqUZVH8eE8ETZ5zMaVX96G3Qn4irF+poNX3U1H3cPmy6rbLlnMX/5tb9jrBq1te5N06iNZTReH4/zNd+qDybr4B51YdA6FoHAIAAAAAElFTkSuQmCC);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(https://w7.pngwing.com/pngs/488/462/png-transparent-check-mark-check-marks-blue-text-technology-thumbnail.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50px;
+}
+ul li span:hover{
+     background: #edeef0;
+}
+
+
+
+
+
+
+
+
+
+

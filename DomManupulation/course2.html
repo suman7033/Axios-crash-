@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>DOM</title>
+</head>
+<body>
+    <div class="container mt-5 col-6">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Chapter_name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+
+          <button id="Btn"class="btn btn-outline-success" type="button">Add</button>
+        </div>
+        <ul id="parentList"class="list-group">
+            <li class="list-group-item d-flex justify-content-between">
+              <h3 class="felx-grow-1">Chapter 1</h3>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+              <button class="btn btn-warning">Edit</button>
+              <button class="btn btn-danger">Remove</button>
+
+            </li>
+          </ul>
+    </div>
+      <script>
+        let addBtn=document.getElementById('Btn')
+        addBtn.addEventListener('click',addChapter)
+
+       function addChapter(e){
+        let currentBtn=e.currentTarget
+        let currentInput=currentBtn.previousElementSibling
+        let currentChapterName=currentInput.value
+
+        let newli=document.createElement('li')
+        //newli.classList.add("list-group-item")
+        newLi.className="list-group-item d-flex justify-content-between"
+        newli.innerHTML='<h3 class="felx-grow-1">${currentChapterName}</h3>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <button class="btn btn-warning">Edit</button>
+        <button class="btn btn-danger">Remove</button>'
+
+        let parentList=document.getElementById('parentList')
+        parentList.appendChild(newli)
+       }
+      </script>
+</body>
+</html>

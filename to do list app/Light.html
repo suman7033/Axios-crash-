@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch bulb</title>
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .button5 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 500px;
+            font-size: 30px;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body
+    style="background-color: black"; 
+    >
+    <img id="bulb" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="" height="500px" class="center"><br><br>
+    <button id="touch" class="button5">Turn on </button>
+    <script>
+        let btn=document.getElementById("touch")
+        let bulb=document.getElementById("bulb")
+        btn.addEventListener("click",toogleBulb)
+
+        function toogleBulb(){
+            if(btn.textContent.includes('on')){
+            bulb.src="https://www.w3schools.com/js/pic_bulbon.gif"
+            btn.textContent="turn off"
+            }else{
+                bulb.src="https://www.w3schools.com/js/pic_bulboff.gif"
+                btn.textContent="turn on"
+            }
+        }
+    </script>
+</body>
+</html>
